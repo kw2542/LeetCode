@@ -1,0 +1,7 @@
+C++ takes 40+ ms
+Java takes 400+ ms
+
+Notes:
+  split() method takes regular expression as argument
+    use "\\s" to hadle sequential white spaces
+  trim() method returns a copy of string with leading and trailing white spaces removed
