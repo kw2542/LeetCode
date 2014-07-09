@@ -11,3 +11,4 @@ Q:
 Notes:
   Brutal force takes too much time. Use Hash could finish in O(n) if unordered_map (HashMap) takes O(1) time to find and insert.
   C++, map.find(key) not value
+  The idea is to go through all the numbers and put them into a HashMap as <number, index + 1> if we couldn’t find a corresponding result. No need to worry about circumstances where there are same values.

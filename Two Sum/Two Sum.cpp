@@ -6,7 +6,6 @@ public:
         for (int i = 0; i < numbers.size(); ++i) {
             auto it = map.find(target - numbers[i]);
             if (it != map.end()) {
-                if (it->second == i + 1) continue;
                 res[0] = it->second;
                 res[1] = i + 1;
                 return res;
@@ -14,6 +13,6 @@ public:
                 map[numbers[i]] = i + 1;
             }
         }
-      return res;
+        return res;
     }
 };
