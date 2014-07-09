@@ -1,0 +1,12 @@
+Q:
+  Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for "abcabcbb" is "abc", which the length is 3. For "bbbbb" the longest substring is "b", with the length of 1.
+ 
+ Notes:
+  Go through all characters only once! check if the index we store is smaller than our start point!
+  For fixed key sets, try to use an array instead of hashmap to save time:
+    For C++
+      In unordered_map implementation, it takes 160+ ms to finish
+      In array implementation, it takes 80+ ms to finish
+    However, there is not an obvious differnece for Java
+      In HashMap implementation, it takes 500+ ms
+      In array implementation, it takes 480+ ms
