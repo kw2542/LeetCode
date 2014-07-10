@@ -2,4 +2,5 @@ Q:
   Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palindromic substring.
   
 Notes:
-  
+  Use Dynamic Programming, if a substring from i to j is palindromic, then the substring that starts i+1 to j-1 must be a palindrome.
+  simple bool[][] array can determine which substrings are palindromic in O(n^2) time. Find the longest one and return.
