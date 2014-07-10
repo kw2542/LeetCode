@@ -1,0 +1,9 @@
+Q:
+  You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+  Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+  Output: 7 -> 0 -> 8
+ 
+ Notes:
+  It is hard to decide whether to create a new node or not if we calculate the value and assign it to the current node. So, one tricky way is to sign value to the next node!
+  Actually, the Java and C++ codes are the same, but it takes Java 700+ ms to finish, almost three times than C++
