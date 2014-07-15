@@ -1,0 +1,41 @@
+Q:
+	Implement regular expression matching with support for '.' and '*'.
+	'.' Matches any single character.
+	'*' Matches zero or more of the preceding element.
+
+	The matching should cover the entire input string (not partial).
+
+	The function prototype should be:
+	bool isMatch(const char *s, const char *p)
+
+	Some examples:
+	isMatch("aa","a") → false
+	isMatch("aa","aa") → true
+	isMatch("aaa","aa") → false
+	isMatch("aa", "a*") → true
+	isMatch("aa", ".*") → true
+	isMatch("ab", ".*") → true
+	isMatch("aab", "c*a*b") → true
+
+Notes:
+	The key idea is to divide the input string into four cases:
+	case 1:
+		str = pattern == null
+			return true
+	case 2:
+		str != null, pattern = null
+			return false
+	case 3:
+		str == null, pattern != null
+			return true if pattern can match empty string
+			else return false
+	case 4:
+		str != null, pattern != null
+			check if pattern starts with something*
+				if (s == p) there are two possible situations:
+					1. s + 1 matches p
+					2. s matches p + 2
+				else
+					s has to match p + 2
+			if (s == p || p == '.') return isMatch(s + 1, p + 1)
+			else return false
