@@ -13,4 +13,4 @@ Q:
 Notes:
   There is not better solution than O(n^2)
   Improve time complexcity using pruning.
-  To prune, sort the input first!
+  To prune, sort the input first! Actually sorting makes the complexity of the algorithm decrease from O(n^3) to O(n^2)
