@@ -1,0 +1,11 @@
+Q:
+  There are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+
+Notes:
+  Naive thought is to go through all elements but it takes O(m+n)
+  How to reduce it to O(log(m+n))?
+  As usually, log appear when we reduce the original program to half every time
+  To find the median is to find the (m+n)/2 or value
+  It is the same as find the (m+n)/4 th value if we remove the smallest (m+n)/4 elements, which is easy since both arrays are sorted.
+  
+  The tricky part of the implementation is we didn't remove smallest elements every time, we only need to make sure that we remove elemets smallers than the index 
