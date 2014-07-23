@@ -7,8 +7,7 @@ public:
             if (index >= strs[0].size()) return strs[0];
             for (int i = 1; i < strs.size(); ++i)
                 if (strs[i].size() < index + 1 || strs[0][index] != strs[i][index])
-                    if (index > 0) return strs[0].substr(0, index);
-                    else return "";
+                    return strs[0].substr(0, index);
             ++index;
         }
     }
