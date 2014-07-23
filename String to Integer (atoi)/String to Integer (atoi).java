@@ -13,6 +13,7 @@ public class Solution {
         } else if (c[i] == '+') ++i;
         for (; i < c.length && c[i] >= '0' && c[i] <= '9'; ++i) {
             res = res * 10 + c[i] - '0';
+            if (res > Integer.MAX_VALUE)  break;
         }
         if (isNegative) res = -res;
         if (res > Integer.MAX_VALUE) res = Integer.MAX_VALUE;

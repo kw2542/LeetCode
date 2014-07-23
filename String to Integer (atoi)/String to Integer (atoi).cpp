@@ -10,6 +10,7 @@ public:
         } else if (*str == '+') ++str;
         for (; *str >= '0' && *str <= '9'; ++str) {
             res = 10 * res + *str - '0';
+            if (res > INT_MAX) break;
         }
         if (isNegative) res = -res;
         if (res > INT_MAX) res = INT_MAX;
