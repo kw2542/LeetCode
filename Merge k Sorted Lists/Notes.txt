@@ -1,0 +1,11 @@
+Q:
+  Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+  
+Notes:
+  This is hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+  Recursively or iteratively merge two adjacent lists.
+  
+  First of all, consider its best time complexity. In my opinion, it is like sort k*n elements. So the best time should be better than O(kn*log(kn))
+  
+  At beginning, my thought is to go through the first element of every list to determine which is the next element, however, it takes O(k * kn) time, which is worse than O(kn*log(kn)). So it is not the best one;
+  Then, consider merging two lists recursively. Merge 1st and 2nd list, then merge the result with 3rd list and so on. It seems work, but, it also takes O(k * kn) time since there are k iterations. Still not working? LOL! The tricky part is to merge [1, 2], [3, 4] ........ And then merge the new list. It takes (kn*log(k)) time!! Bingo!!!
