@@ -1,0 +1,14 @@
+Q:
+  You are given a string, S, and a list of words, L, that are all of the same length. Find all starting indices of substring(s) in S that is a concatenation of each word in L exactly once and without any intervening characters.
+
+  For example, given:
+  S: "barfoothefoobarman"
+  L: ["foo", "bar"]
+
+  You should return the indices: [0,9].
+  (order does not matter).
+
+Notes:
+  In CPP, [] operator performs a search again. If going to use a certain value serveral times, keep in mind that it is much efficient to use iterator. What's more, if the iterator equals end(), we have to search again after insertion.
+  
+  Enum all combinations of concatenations is a pain. Use a map to count the number of each word or use a set if they are all unique.
