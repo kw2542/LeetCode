@@ -1,0 +1,10 @@
+Q:
+	Multiply Strings Total Accepted: 13423 Total Submissions: 65355 My Submissions
+	Given two numbers represented as strings, return multiplication of the numbers as a string.
+
+	Note: The numbers can be arbitrarily large and are non-negative.
+
+Notes:
+	Using defualt * instead of multiple + to perform
+	char - '0' = int
+	use int[] instead of char[] to store result
