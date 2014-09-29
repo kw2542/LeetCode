@@ -1,0 +1,4 @@
+Q:
+	Implement pow(x, n).
+Notes:
+	Divide and Conquere
