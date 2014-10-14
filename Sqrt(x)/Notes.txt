@@ -1,0 +1,10 @@
+Q:
+	Implement int sqrt(int x).
+
+	Compute and return the square root of x.
+
+Notes:
+	Brute force -> n = 1 : x / 2 and find first n * n > x;
+		minor improvments: (n + 1) ^ 2 = n ^ 2 + 2n + 1
+	Binary search sqrt(x) <= x / 2 -> if mid * mid > x lower half ; mid * mid < x higher half
+	Newton equation res ^ 2 = x -> res ^ 2 - x = 0 -> res_n = (res_n-1 - a / res_n-1) * 0.5

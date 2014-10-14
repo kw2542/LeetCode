@@ -1,15 +1,14 @@
 public class Solution {
     public String longestPalindrome(String s) {
-    	final int LENGTH = s.length();
-    	final char[] c = s.toCharArray();
+        final int LENGTH = s.length();
+        final char[] c = s.toCharArray();
         boolean[][] dp = new boolean[LENGTH][LENGTH];
         for (int i = 0; i < LENGTH; ++ i) {
             dp[i][i] = true;
             if(i < LENGTH - 1) dp[i][i + 1] = (c[i] == c[i + 1]);
         }
         for (int offset = 2; offset < LENGTH; ++offset) {
-            for (int start = 0; start < LENGTH - 1; ++ start) {
-                if (start + offset >= LENGTH) break;
+            for (int start = 0; start < LENGTH - offset; ++ start) {
                 dp[start][start + offset] = dp[start + 1][start + offset - 1] && (c[start] == c[start + offset]);
             }
         }
